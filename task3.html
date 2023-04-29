@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="">
+        <label for="textContent">Запитання: Хто скаче? <br></label>
+        <label for="other">
+            <input type="radio" name="answer" id="rd1" value="false">
+            Машина
+        </label>
+        <br>
+        <label for="other">
+            <input type="radio" name="answer" id="rd1" value="false">
+            Літак
+        </label>
+        <br>
+        <label for="other">
+            <input type="radio" name="answer" id="rd1" value="true">
+            Заєць
+        </label>
+        <br>
+        <button type="submit" onclick="GetAnswer()">Відповісти</button>
+    </form>
+
+    <script>
+        function GetAnswer() {
+            var rdList = document.querySelectorAll('input[name="answer"]:checked');
+            if (rdList.length === 1 && rdList[0].value === "true") {
+                alert("Правильна відповідь");
+            } else {
+                alert("Не правильна відповідь");
+            }
+        }
+    </script>
+</body>
+
+</html>
